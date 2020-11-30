@@ -1,20 +1,30 @@
 import java.rmi.Naming;
-import java.rmi.Remote;
-import java.rmi.registry.LocateRegistry;
-
-public class CalculadoraServer {
-	CalculadoraServer() {
+import java.util.Scanner;
+public class CalculadoraClient {
+	public static void main(String[] args) {
 		try {
-			System.setProperty("java.rmi.server.hostname","192.168.0.6");
-			LocateRegistry.createRegistry(1099);
-			Calculadora c = new CalculadoraImple();
-			Naming.bind("CalculadoraService", (Remote) c);
+			Calculadora c = (Calculadora) Naming.lookup("rmi://192.168.0.15:1099/CalculadoraService");
+			Scanner l = new Scanner(System.in);
+			double a,b;
+			char op;
+			int d = 0;
+			while(d == 0){
+				System.out.println("0-Calculadora\n1-Sair");
+				d = l.nextInt();
+				if(d == 0){
+				System.out.println("Informe os valores a serem calculados e a operação na seguinte forma -> <Valor1> <Operação> <Valor2>:");
+				System.out.println("Valor 1");
+				a=l.nextDouble();
+				System.out.println("Operador");
+				op = (char)System.in.read();
+				System.out.println("Valor 2");
+				b=l.nextDouble();
+				System.out.println("Resultado : " + c.calc(a,b,op));
+				}
+			}
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}
-	
-	public static void main(String[] args) {
-		new CalculadoraServer();
 	}
 }
