@@ -22,15 +22,19 @@ public class CalculadoraImple extends UnicastRemoteObject implements Calculadora
 		return i;
 	}
 	private double add(double a, double b){
+		System.out.println("A = " + a + " B = " + b);
 		return a+b;
 	}
 	private double sub(double a, double b){
+		System.out.println("A = " + a + " B = " + b);
 		return a-b;
 	}
 	private double mult(double a, double b){
+		System.out.println("A = " + a + " B = " + b);
 		return a*b;
 	}
 	private double div(double a, double b){
+		System.out.println("A = " + a + " B = " + b);
 		return a/b;
 	}
 }
