@@ -22,7 +22,7 @@ public class CalculadoraClient {
 				System.out.println("Resultado : " + c.calc(a,b,op));
 				}
 			}
-			
+			l.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
