@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CalculadoraClient {
 	public static void main(String[] args) {
 		try {
-			Calculadora c = (Calculadora) Naming.lookup("rmi://192.168.0.15:1099/CalculadoraService");
+			Calculadora c = (Calculadora) Naming.lookup("rmi://localhost/Calculadora");
 			Scanner l = new Scanner(System.in);
 			double a,b;
 			char op;

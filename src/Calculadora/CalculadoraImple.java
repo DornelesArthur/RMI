@@ -6,7 +6,7 @@ public class CalculadoraImple extends UnicastRemoteObject implements Calculadora
 	private static final long serialVersionUID = 1L;
 
 	protected CalculadoraImple() throws RemoteException{
-		super();
+		// super();
 	}
 	public double calc(double a, double b, char op) throws RemoteException{
 		double i = 0;
