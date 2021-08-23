@@ -1,2 +1,3 @@
 Compilar todas as Classes normais menos os stubs usando javac
 Gerar os stubs usando o comando "rmic -keep <ClassesImplementadoraDaInterface>"
+Executar o Cliente e Servidor usando "java <ClienteOuServidor"
