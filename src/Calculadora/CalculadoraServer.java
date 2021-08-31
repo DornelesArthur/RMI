@@ -15,6 +15,10 @@ public class CalculadoraServer {
 			Naming.rebind(objName, calc);
 
 			System.out.println("Aguardando ....");
+
+			while(true){
+
+			}
 			// System.setProperty("java.rmi.server.hostname","CalculatorService");
 			// Calculadora c = new CalculadoraImple();
 			// Naming.rebind("192.168.194.115:3001/CalculatorService", c);
