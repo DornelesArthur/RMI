@@ -17,8 +17,6 @@ public class Node5 implements Serializable {
 		try {
 			// Info outros nodos
 			ArrayList<String> nameServers = new ArrayList<String>();
-			nameServers.add("rmi://localhost:3001/GossipServer1");
-			nameServers.add("rmi://localhost:3002/GossipServer2");
 			nameServers.add("rmi://localhost:3003/Node3");
 			nameServers.add("rmi://localhost:3004/Node4");
 			
@@ -43,7 +41,7 @@ public class Node5 implements Serializable {
                 while(System.currentTimeMillis() != startTime+waitTime){
                 }
 				// mandar gossip
-				int nodeNameIndex = (int)(Math.random()*((3)+1));
+				int nodeNameIndex = (int)(Math.random()*((1)+1));
 				System.out.println("Mandando mesagem para = " + (nameServers.get(nodeNameIndex)));
 
 				try{
